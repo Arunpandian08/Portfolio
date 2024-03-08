@@ -1,0 +1,32 @@
+.app {
+    transition: background-color 0.4s ease;
+    min-height: 100vh;
+}
+
+.light {
+    background-color: #dcd9d9;
+    color: #000000;
+
+    .navbar {
+        background: orange;
+        box-shadow: inset 0 0 10px grey;
+    }
+}
+
+.dark {
+    background-color: #000000;
+    color: #ffffff !important;
+
+    .navbar {
+        background-color: orange;
+        box-shadow: inset 0 0 10px grey;
+    }
+
+    .navbar-brand {
+        color: #000000;
+    }
+
+    .card {
+        color: #ffffff;
+    }
+}

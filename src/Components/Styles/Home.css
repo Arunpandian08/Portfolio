@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Bilbo+Swash+Caps&family=Bungee+Spice&family=Merienda:wght@300..900&family=Milonga&family=Rubik+Beastly&family=Rubik+Wet+Paint&display=swap');
+
+@media screen and (min-width:769px) {
+    .card-body {
+        position: relative;
+        margin-top: 20% !important;
+    }
+}
+
+@media screen and (min-width:1025px) {
+    .card-body {
+        position: relative;
+        margin-top: 35% !important;
+    }
+}
+
+@media screen and (min-width:700px) {
+    .card-img {
+        position: relative;
+        margin-top: 20% !important;
+    }
+}
+
+.card-img {
+    border-radius: 20%;
+}
+
+.card {
+    border: none;
+    background: transparent;
+}
+
+.card-hi {
+    font-family: Rubik Wet Paint;
+    font-size: 3rem;
+    color: #fff700;
+    text-shadow: 0 0 10px black;
+}
+
+.card-name {
+    font-size: 3.5rem;
+    font-family: Milonga;
+
+    span {
+        color: rgb(12, 160, 84);
+        font-weight: 600;
+    }
+}
+
+.card-text {
+    font-size: 2rem;
+    font-family: merienda;
+
+    span {
+        color: rgb(0, 255, 0);
+        text-shadow: 0 0 10px #ffffff !important;
+        font-weight: 600;
+        text-shadow: 0 0 5px black;
+    }
+}
+
+.card-foot {
+    font-family: Bilbo Swash Caps;
+    font-size: 4rem;
+}
+
+@media screen and (max-width:768px) {
+
+    .card-body {
+        position: relative;
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        top: 50px;
+    }
+
+    .card-hi {
+        font-size: 2rem !important;
+    }
+
+    .card-name {
+        font-size: 2.5rem !important;
+    }
+
+    .card-text {
+        font-size: 1.3rem !important;
+    }
+
+    .card-footer {
+        font-size: 1rem !important;
+    }
+}
+
+@media screen and (max-width:650px) {
+    .row {
+        display: flex;
+        flex-direction: column-reverse !important;
+    }
+}
+
+.btn {
+    outline: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #40B3A2;
+    min-width: 200px;
+    border: 0;
+    border-radius: 4px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .1);
+    box-sizing: border-box;
+    padding: 16px 20px;
+    color: #000000 !important;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.btn>a {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+}
+
+.btn:hover {
+    opacity: .95;
+}
+
+.btn .animation {
+    border-radius: 100%;
+    animation: ripple 0.6s linear infinite;
+}
+
+@keyframes ripple {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.1), 0 0 0 20px rgba(255, 255, 255, 0.1), 0 0 0 40px rgba(255, 255, 255, 0.1), 0 0 0 60px rgba(255, 255, 255, 0.1);
+    }
+
+    100% {
+        box-shadow: 0 0 0 20px rgba(255, 255, 255, 0.1), 0 0 0 40px rgba(255, 255, 255, 0.1), 0 0 0 60px rgba(255, 255, 255, 0.1), 0 0 0 80px rgba(255, 255, 255, 0);
+    }
+}
