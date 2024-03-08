@@ -6,7 +6,7 @@ import './Styles/Navbar.css'
 const Navbar = ({ darkMode, toggleTheme }) => {
 
     return (
-        <nav class="navbar navbar-expand-lg ">
+        <nav class="navbar sticky-top navbar-expand-lg ">
             <div class="container">
                 <Link class="navbar-brand" to="/">D Arunpandian</Link>
                 <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">

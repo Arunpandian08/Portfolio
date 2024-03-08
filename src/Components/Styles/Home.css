@@ -10,14 +10,13 @@
 @media screen and (min-width:1025px) {
     .card-body {
         position: relative;
-        margin-top: 35% !important;
     }
 }
 
 @media screen and (min-width:700px) {
     .card-img {
         position: relative;
-        margin-top: 20% !important;
+        margin-top: 10%;
     }
 }
 
