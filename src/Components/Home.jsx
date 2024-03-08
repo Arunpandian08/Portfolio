@@ -6,7 +6,7 @@ const Home = ({ darkMode }) => {
             <div className="row">
                 <div className="col">
                     <div className="image-container">
-                        <img src={darkMode ? "/src/Components/public/images/IMG_20230127_122150_725-removebg-preview (1).png" : "/src/Components/public/images/IMG_20230127_122150_725-removebg-preview.png"} class="card-img" alt="profile" />
+                        <img src={darkMode ? "./public/images/IMG_20230127_122150_725-removebg-preview (1).png" : "./public/images/IMG_20230127_122150_725-removebg-preview.png"} class="card-img" alt="profile" />
                     </div>
                 </div>
                 <div className="col">
