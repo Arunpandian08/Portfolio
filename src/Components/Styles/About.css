@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Square+Peg&family=Tilt+Neon&family=Rubik+Microbe&display=swap');
+
+.about-info {
+  list-style: none;
+  padding: 0;
+}
+.para{
+  font: 1.7rem Square Peg;
+  letter-spacing: 0.03rem;
+  font-weight: 600;
+}
+.about-info li {
+  clear: both;
+  font-size: 1rem;
+  margin-bottom: 10px;
+  /* Adjust as needed */
+}
+
+.about-info li span:first-child {
+  float: left;
+  width: 100px;
+  /* Adjust as needed */
+  font-weight: bold;
+}
+
+.about-info li span:last-child {
+  float: right;
+  width: calc(100% - 100px);
+  /* Adjust as needed */
+}
+
+.about-title {
+  font-family: Rubik Microbe;
+  font-weight: 600;
+  font-size: 36px;
+  /* Adjust font size as needed */
+  background-image: linear-gradient(45deg, #FFBD39, #ff0000, #FFBD39, #FFBD39);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-decoration-color: transparent;
+}
+
+.label {
+  font-family: Tilt Neon !important;
+  color: #ffbd39;
+}
+
+@media screen and (max-width:769px) {
+  .about-title {
+    font-size: 2rem;
+    margin-top: -25px !important;
+  }
+
+  .about-info li {
+    font-size: 1rem !important;
+  }
+}
+
+@media screen and (max-width:426px) {
+  #mail {
+    font-size: 0.8rem !important;
+  }
+}
+.card-1{
+  min-width: 380px;
+  max-width: 992px !important;
+  border-radius: 8px;
+  margin: 2rem;
+  display: flex;
+  flex-direction: column;
+  background-color: #dad8d8;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(5px);
+  padding: 20px;
+}
+@media screen and (max-width:600px) {
+  .card-1{
+    padding: 5px;
+    margin-left: -0.5px;
+    min-width:300px !important;
+  }
+}
+.about-image-container {
+  display: inline-block;
+  padding: 0px;
+}
+.about-image-container:hover {
+  transform: scale(1.02);
+  transition: all 0.5s ease-in-out;
+}

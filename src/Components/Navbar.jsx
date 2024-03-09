@@ -1,10 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import './Styles/Navbar.css'
 
 
 const Navbar = ({ darkMode, toggleTheme }) => {
-
+    const location = useLocation()
     return (
         <nav class="navbar sticky-top navbar-expand-lg ">
             <div class="container">
@@ -39,51 +39,27 @@ const Navbar = ({ darkMode, toggleTheme }) => {
                         </span>
                         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>
-                    <div class="offcanvas-body">
+                    <div className={`offcanvas-body ${darkMode ? 'dark' : 'light'}`}>
                         <ul class="navbar-nav ms-auto ">
                             <li class="nav-item">
-                                <Link to='/' class="nav-link" >Home<span className='line p-2'>|</span></Link>
+                                <Link to='/'className={`nav-link ${location.pathname === '/' ? 'active' : ''}`} >Home</Link>
                             </li>
                             <li class="nav-item">
-                                <Link class="nav-link" to="/about">About<span className='line p-2'>|</span></Link>
+                                <Link to="/about" className={`nav-link ${location.pathname === '/about' ? 'active' : ''}`} >About</Link>
                             </li>
                             <li class="nav-item">
-                                <Link class="nav-link" to="/skills">Skills<span className='line p-2'>|</span></Link>
+                                <Link to="/skills"className={`nav-link ${location.pathname === '/skills' ? 'active' : ''}`}  >Skills</Link>
                             </li>
                             <li class="nav-item">
-                                <Link class="nav-link" to="/resume">Resume<span className='line p-2'>|</span></Link>
+                                <Link to="/resume" className={`nav-link ${location.pathname === '/resume' ? 'active' : ''}`} >Resume</Link>
                             </li>
                             <li class="nav-item">
-                                <Link class="nav-link" to="/contact">Contact</Link>
+                                <Link to="/contact" className={`nav-link ${location.pathname === '/contact' ? 'active' : ''}`} >Contact</Link>
                             </li>
                         </ul>
                     </div>
                 </div>
-                {/* <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <Link to='/' class="nav-link" >Home<span className='p-2'>|</span></Link>
-                    </li>
-                    <li class="nav-item">
-                        <Link class="nav-link" to="/about">About<span className='p-2'>|</span></Link>
-                    </li>
-                    <li class="nav-item">
-                        <Link class="nav-link" to="/skills">Skills<span className='p-2'>|</span></Link>
-                    </li>
-                    <li class="nav-item">
-                        <Link class="nav-link" to="/resume">Resume<span className='p-2'>|</span></Link>
-                    </li>
-                    <li class="nav-item">
-                        <Link class="nav-link" to="/contact">Contact</Link>
-                    </li>
-                </ul>
-            </div> */}
-                <div class='row'>
-                    {/* <div className="col">
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                </div> */}
+                <div class='row'>   
                     <div className="col">
                         <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>

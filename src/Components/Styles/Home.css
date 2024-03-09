@@ -1,27 +1,33 @@
-@import url('https://fonts.googleapis.com/css2?family=Bilbo+Swash+Caps&family=Bungee+Spice&family=Merienda:wght@300..900&family=Milonga&family=Rubik+Beastly&family=Rubik+Wet+Paint&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bilbo+Swash+Caps&family=Bungee+Spice&family=Merienda:wght@300..900&family=Milonga&family=Rubik+Beastly&family=Righteous&display=swap');
 
-@media screen and (min-width:769px) {
-    .card-body {
-        position: relative;
-        margin-top: 20% !important;
-    }
-}
-
-@media screen and (min-width:1025px) {
-    .card-body {
-        position: relative;
-    }
-}
-
-@media screen and (min-width:700px) {
-    .card-img {
-        position: relative;
-        margin-top: 10%;
-    }
+.image-container {
+    display: inline-block;
+    padding: 0px;
+    margin-top: 10% !important;
+    border-radius: 20px;
+    border: 5px solid transparent;
+    border-image-slice: 20;
+    border-image-source:
+        linear-gradient(to bottom, #FFBD39 33.33%, transparent 33.33%, transparent 66.66%, #FFBD39 66.66%);
+        
 }
 
 .card-img {
-    border-radius: 20%;
+    display: block;
+    width: 100%;
+    height: auto;
+    
+}
+
+.image-container:hover {
+    transform: scale(1.02);
+    transition: all 0.5s ease-in-out;
+}
+
+@media screen and (min-width:1439px) {
+    .image-container {
+        margin-top: 10px !important;
+    }
 }
 
 .card {
@@ -30,10 +36,9 @@
 }
 
 .card-hi {
-    font-family: Rubik Wet Paint;
-    font-size: 3rem;
-    color: #fff700;
-    text-shadow: 0 0 10px black;
+    font-family: Righteous;
+    font-size: 1.5rem;
+    color: #FFBD39;
 }
 
 .card-name {
@@ -41,8 +46,16 @@
     font-family: Milonga;
 
     span {
-        color: rgb(12, 160, 84);
+        font-family: Rubik Microbe;
+        font-size: 3.5rem !important;
         font-weight: 600;
+        font-size: 36px;
+        /* Adjust font size as needed */
+        background-image: linear-gradient(180deg, #FFBD39, #ff0000, #FFBD39, #FFBD39);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-decoration-color: transparent;
     }
 }
 
@@ -51,29 +64,42 @@
     font-family: merienda;
 
     span {
-        color: rgb(0, 255, 0);
-        text-shadow: 0 0 10px #ffffff !important;
+        font-family: Rubik Microbe;
+        font-size: 2rem !important;
         font-weight: 600;
-        text-shadow: 0 0 5px black;
+        font-size: 36px;
+        /* Adjust font size as needed */
+        background-image: linear-gradient(90deg, #FFBD39, #ff0000, #FFBD39, #FFBD39);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-decoration-color: transparent;
     }
 }
 
 .card-foot {
     font-family: Bilbo Swash Caps;
+    letter-spacing: 0.09rem;
+    font-weight: 700;
     font-size: 4rem;
+}
+
+@media screen and (min-width:1023px) {
+    .card-foot {
+        padding-top: 2.5rem !important;
+    }
 }
 
 @media screen and (max-width:768px) {
 
-    .card-body {
+    /* .card-body {
         position: relative;
         display: flex;
         flex-flow: column wrap;
         justify-content: center;
         align-items: center;
         align-content: center;
-        top: 50px;
-    }
+    } */
 
     .card-hi {
         font-size: 2rem !important;
@@ -96,51 +122,79 @@
     .row {
         display: flex;
         flex-direction: column-reverse !important;
+        align-items: center;
     }
 }
 
-.btn {
-    outline: 0;
-    display: inline-flex;
-    align-items: center;
-    justify-content: space-between;
-    background: #40B3A2;
-    min-width: 200px;
-    border: 0;
-    border-radius: 4px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, .1);
-    box-sizing: border-box;
-    padding: 16px 20px;
-    color: #000000 !important;
-    font-size: 12px;
-    font-weight: 600;
-    letter-spacing: 1.2px;
+.btns {
     text-transform: uppercase;
-    overflow: hidden;
-    cursor: pointer;
+    letter-spacing: 0.1em;
+    padding: 10px 30px;
+    transition: 0.5s;
+    position: relative;
+    font-size: 17px;
+    background: #333;
+    border: none;
+    color: #fff;
 }
 
-.btn>a {
-    text-decoration: none;
-    color: black;
-    font-weight: 500;
+.btns:hover {
+    letter-spacing: 0.25em;
+    background: #FFBD39;
+    color: #ffffff;
+    box-shadow: 0 0 35px #FFBD39;
 }
 
-.btn:hover {
-    opacity: .95;
+.btns::before {
+    content: '';
+    position: absolute;
+    inset: 2px;
+    background: #222222;
 }
 
-.btn .animation {
-    border-radius: 100%;
-    animation: ripple 0.6s linear infinite;
+.btns span {
+    position: relative;
+    z-index: 1;
 }
 
-@keyframes ripple {
-    0% {
-        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.1), 0 0 0 20px rgba(255, 255, 255, 0.1), 0 0 0 40px rgba(255, 255, 255, 0.1), 0 0 0 60px rgba(255, 255, 255, 0.1);
-    }
+.btns i {
+    position: absolute;
+    inset: 0;
+    display: block;
+}
 
-    100% {
-        box-shadow: 0 0 0 20px rgba(255, 255, 255, 0.1), 0 0 0 40px rgba(255, 255, 255, 0.1), 0 0 0 60px rgba(255, 255, 255, 0.1), 0 0 0 80px rgba(255, 255, 255, 0);
-    }
+.btns i::before {
+    content: '';
+    position: absolute;
+    border: 2px solid #FFBD39;
+    width: 7px;
+    height: 4px;
+    top: -3.5px;
+    left: 80%;
+    background: #222222;
+    transform: translateX(-50%);
+    transition: 0.5s;
+}
+
+.btns:hover i::before {
+    width: 20px;
+    left: 20%;
+}
+
+.btns i::after {
+    content: '';
+    position: absolute;
+    border: 2px solid #FFBD39;
+    width: 7px;
+    height: 4px;
+    bottom: -3.5px;
+    left: 20%;
+    background: #222222;
+    transform: translateX(-50%);
+    transition: 0.5s;
+}
+
+.btns:hover i::after {
+    width: 20px;
+    left: 80%;
 }

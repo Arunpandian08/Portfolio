@@ -1,12 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&family=Trade+Winds&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&family=Trade+Wind&family=Protest+Revolution&display=swap');
 
 /* styles.css */
+
+nav{
+    padding: 25px !important;
+}
 .navbar-brand {
     font-size: 2.2rem !important;
     font-weight: 300;
-    font-family: Trade Winds;
-    color: #000000;
-    text-shadow: 0 0 10px rgb(255, 255, 255);
+    font-family: Protest Revolution;
+    
 }
 
 @media screen and (max-width:426px) {
@@ -54,12 +57,13 @@ nav ul li a::after {
 }
 
 nav ul li a:hover::after {
-    width: 80%;
+    width: 100%;
+    height:3px
     /* Expand the border-bottom on hover */
 }
 
-.nav-link:active {
-    color: #ff0000;
+.nav-link.active {
+    color: #058b29;
     font-weight: 900;
 }
 
