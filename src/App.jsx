@@ -5,7 +5,7 @@ import Navbar from './Components/Navbar';
 import Home from './Components/Home';
 import About from './Components/About';
 import Contact from './Components/Contact';
-import ScrollToTop from './Components/ScrollToTop';
+import Social from './Components/Social';
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -25,15 +25,15 @@ function App() {
 
   const themeClass = darkMode ? 'dark' : 'light';
   return (
+    
     <Router>
-      <ScrollToTop />
       <div className={`app ${darkMode ? 'dark' : 'light'}`}>
         <Navbar darkMode={darkMode} toggleTheme={toggleTheme} />
+        <Social darkMode={darkMode} />
         <Routes>
           <Route path="/" element={<Home darkMode={darkMode} />} />
-          <Route path="/about" element={<About  />} />
-          <Route path="/contact" element={<Contact />} />
-          {/* Add routes for other components */}
+          <Route path="/about" element={<About darkMode={darkMode} />} />
+          <Route path="/contact" element={<Contact darkMode={darkMode} />} />
         </Routes>
       </div>
     </Router>

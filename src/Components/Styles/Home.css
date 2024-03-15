@@ -1,20 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Bilbo+Swash+Caps&family=Bungee+Spice&family=Merienda:wght@300..900&family=Milonga&family=Rubik+Beastly&family=Righteous&display=swap');
-
+.text-white svg{
+    fill: #fff;
+}
 .image-container {
     display: inline-block;
     padding: 0px;
+    margin-left: 35px;
     margin-top: 10% !important;
     border-radius: 20px;
-    border: 5px solid transparent;
+    cursor: pointer;
+    background-color: #514f4f;
+    /* height: 100vh; */
+    overflow: hidden;
+    border: 6px solid transparent;
     border-image-slice: 20;
     border-image-source:
         linear-gradient(to bottom, #FFBD39 33.33%, transparent 33.33%, transparent 66.66%, #FFBD39 66.66%);
-        
 }
+
+    
 
 .card-img {
     display: block;
     width: 100%;
+    filter: contrast(200%);
     height: auto;
     
 }
@@ -51,7 +60,9 @@
         font-weight: 600;
         font-size: 36px;
         /* Adjust font size as needed */
-        background-image: linear-gradient(180deg, #FFBD39, #ff0000, #FFBD39, #FFBD39);
+        background-image: url(https://i.pinimg.com/originals/3a/44/3d/3a443d0538b33d910c6e701dd6423fb7.gif);
+        background-size: cover;
+        background-position: center;
         -webkit-background-clip: text;
         background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -69,7 +80,9 @@
         font-weight: 600;
         font-size: 36px;
         /* Adjust font size as needed */
-        background-image: linear-gradient(90deg, #FFBD39, #ff0000, #FFBD39, #FFBD39);
+        background-image: url(https://i.pinimg.com/originals/3a/44/3d/3a443d0538b33d910c6e701dd6423fb7.gif);
+        background-size: cover;
+        background-position: center;
         -webkit-background-clip: text;
         background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -133,16 +146,18 @@
     transition: 0.5s;
     position: relative;
     font-size: 17px;
-    background: #333;
+    background: #FFBD39;
     border: none;
     color: #fff;
+   
 }
 
 .btns:hover {
     letter-spacing: 0.25em;
     background: #FFBD39;
     color: #ffffff;
-    box-shadow: 0 0 35px #FFBD39;
+    -webkit-box-reflect: below 1px linear-gradient(transparent,#ffbd39);
+    box-shadow:  0 0 5px #FFBD39 ,0 0 15px #FFBD39 ,0 0 25px #FFBD39;
 }
 
 .btns::before {

@@ -9,6 +9,7 @@ nav{
     font-size: 2.2rem !important;
     font-weight: 300;
     font-family: Protest Revolution;
+    cursor: pointer;
     
 }
 
@@ -23,6 +24,7 @@ nav{
     font-weight: 400;
     font-family: Merienda;
     padding: 0rem;
+    cursor: pointer;
 }
 
 nav ul li {
@@ -51,15 +53,13 @@ nav ul li a::after {
     width: 0;
     height: 2px;
     background-color: #000000;
-    /* Initial color for the border-bottom */
     transition: width 0.3s ease-in-out;
-    /* Transition for width change */
 }
 
 nav ul li a:hover::after {
     width: 100%;
-    height:3px
-    /* Expand the border-bottom on hover */
+    height:3px;
+    box-shadow:0 0 8px #f3b519;
 }
 
 .nav-link.active {
@@ -153,3 +153,52 @@ nav ul li a:hover::after {
     height: 2px;
     background-image: radial-gradient(circle at 50% 0, #f5f5f5, #c4c4c4);
 }
+
+#checkbox {
+    display: none;
+  }
+  
+  .toggle {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition-duration: .3s;
+  }
+  
+  .bars {
+    width: 100%;
+    height: 4px;
+    background-color: rgb(76, 189, 151);
+    border-radius: 5px;
+    transition-duration: .3s;
+  }
+  
+  #checkbox:checked + .toggle .bars {
+    margin-left: 13px;
+  }
+  
+  #checkbox:checked + .toggle #bar2 {
+    transform: rotate(135deg);
+    margin-left: 0;
+    transform-origin: center;
+    transition-duration: .3s;
+  }
+  
+  #checkbox:checked + .toggle #bar1 {
+    transform: rotate(45deg);
+    transition-duration: .3s;
+    transform-origin: left center;
+  }
+  
+  #checkbox:checked + .toggle #bar3 {
+    transform: rotate(-45deg);
+    transition-duration: .3s;
+    transform-origin: left center;
+  }
+  
