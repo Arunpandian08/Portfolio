@@ -13,13 +13,13 @@ const About = ({ darkMode }) => {
                 </div>
               </div>
               <div className="col mt-5">
-                <h1 className="about-title d-flex">About Me</h1>
-                <p className="para p-3">
+                <h1 className="about-title d-flex"><i class="fa-solid fa-quote-left"></i> About Me</h1><hr />
+                <p className="para p">
                   <i class="bi bi-arrow-right"></i> Ability to adapt to new
                   technologies and methodologies flexibility in learning and
                   adapting to changes in the field.
                 </p>
-                <p className="para p-3">
+                <p className="para p-1">
                   <i class="bi bi-arrow-right"></i> Ability to work
                   collaboratively with others, fostering a positive and
                   productive team environment.

@@ -22,13 +22,15 @@ const Home = ({ darkMode }) => {
                     <h6 class="card-text">
                       Passionate <span>MERN Stack Developer</span>
                     </h6>
-                    <h6 className="card-foot p-1 fs-3">
+                    <div className="card-content">
+                    <p className="para1">
                       I love to start my Carrier as Full stack developer
-                    </h6>
-                    <h6 className="card-foot p-1 fs-3">
+                    </p>
+                    <p className="para1">
                       Always ready to collaborate with knowledgeable Persons
                       with update my tecky knowledge
-                    </h6>
+                    </p>
+                    </div>
                     <div className="home-btn p-3">
                       <button class="btns">
                         <a

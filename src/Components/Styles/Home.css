@@ -1,4 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Bilbo+Swash+Caps&family=Bungee+Spice&family=Merienda:wght@300..900&family=Milonga&family=Rubik+Beastly&family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gabarito&family=Kite+One&family=Averia+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Dangrek&family=Merienda:wght@300..900&family=Tenali+Ramakrishna&display=swap');
+#home{
+    height:100vh;
+}
 .text-white svg{
     fill: #fff;
 }
@@ -6,31 +9,26 @@
     display: inline-block;
     padding: 0px;
     margin-left: 35px;
-    margin-top: 10% !important;
-    border-radius: 20px;
+    /* margin-top: 10% !important; */
+    border-radius: 280px 10px 100px 200px;
+    box-sizing: border-box;
+    box-shadow: 0 0 20px #222222,0 0 40px #222222;
     cursor: pointer;
-    background-color: #514f4f;
-    /* height: 100vh; */
-    overflow: hidden;
-    border: 6px solid transparent;
-    border-image-slice: 20;
-    border-image-source:
-        linear-gradient(to bottom, #FFBD39 33.33%, transparent 33.33%, transparent 66.66%, #FFBD39 66.66%);
+    opacity: 0.9;
+    border:inset 6px solid black;
+    overflow: visible;
 }
-
-    
-
 .card-img {
     display: block;
     width: 100%;
-    filter: contrast(200%);
     height: auto;
-    
+    border-radius: 0 0 20% 40%;   
 }
 
-.image-container:hover {
-    transform: scale(1.02);
-    transition: all 0.5s ease-in-out;
+.card-img:hover {
+    transform: scale(1.05);
+    transition: top 0.5s ease-in-out;
+    z-index: -1;
 }
 
 @media screen and (min-width:1439px) {
@@ -45,22 +43,22 @@
 }
 
 .card-hi {
-    font-family: Righteous;
+    font-family: merienda;
     font-size: 1.5rem;
-    color: #FFBD39;
+    color: #183153;
 }
 
 .card-name {
     font-size: 3.5rem;
-    font-family: Milonga;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 
     span {
-        font-family: Rubik Microbe;
+        font-family: Gabarito;
         font-size: 3.5rem !important;
-        font-weight: 600;
+        font-weight: 900;
         font-size: 36px;
         /* Adjust font size as needed */
-        background-image: url(https://i.pinimg.com/originals/3a/44/3d/3a443d0538b33d910c6e701dd6423fb7.gif);
+        background-color: #153183;
         background-size: cover;
         background-position: center;
         -webkit-background-clip: text;
@@ -72,15 +70,13 @@
 
 .card-text {
     font-size: 2rem;
-    font-family: merienda;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 
     span {
-        font-family: Rubik Microbe;
-        font-size: 2rem !important;
-        font-weight: 600;
-        font-size: 36px;
-        /* Adjust font size as needed */
-        background-image: url(https://i.pinimg.com/originals/3a/44/3d/3a443d0538b33d910c6e701dd6423fb7.gif);
+        font-family: Gabarito;
+        font-size: 2.5rem !important;
+        font-weight: 900;
+        background-color: #153183;
         background-size: cover;
         background-position: center;
         -webkit-background-clip: text;
@@ -90,16 +86,15 @@
     }
 }
 
-.card-foot {
-    font-family: Bilbo Swash Caps;
-    letter-spacing: 0.09rem;
-    font-weight: 700;
-    font-size: 4rem;
+.card-content {
+    font-family: Kite One;
+    /* letter-spacing: 0.09rem; */
+    font-size: rem;
 }
 
 @media screen and (min-width:1023px) {
-    .card-foot {
-        padding-top: 2.5rem !important;
+    .card-content p:first-child {
+        padding-top: 1.5rem !important;
     }
 }
 

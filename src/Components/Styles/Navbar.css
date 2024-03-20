@@ -1,18 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&family=Trade+Wind&family=Protest+Revolution&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Akronim&family=Averia+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Fira+Mono&family=Merienda:wght@300..900&display=swap');
 /* styles.css */
 
-nav{
-    padding: 25px !important;
-}
 .navbar-brand {
-    font-size: 2.2rem !important;
+    font-size: 3.2rem !important;
     font-weight: 300;
-    font-family: Protest Revolution;
-    cursor: pointer;
-    
+    font-family: Akronim;
+    cursor: pointer;   
 }
-
 @media screen and (max-width:426px) {
     .navbar-brand {
         font-size: 1.5rem !important;
@@ -22,7 +16,7 @@ nav{
 .nav-link {
     font-size: 1.2rem;
     font-weight: 400;
-    font-family: Merienda;
+    font-family: Fira Mono;
     padding: 0rem;
     cursor: pointer;
 }
@@ -32,6 +26,7 @@ nav ul li {
 }
 
 nav ul li a {
+    
     text-decoration: none;
     color: #333;
     position: relative;
@@ -54,17 +49,6 @@ nav ul li a::after {
     height: 2px;
     background-color: #000000;
     transition: width 0.3s ease-in-out;
-}
-
-nav ul li a:hover::after {
-    width: 100%;
-    height:3px;
-    box-shadow:0 0 8px #f3b519;
-}
-
-.nav-link.active {
-    color: #058b29;
-    font-weight: 900;
 }
 
 @media screen and (max-width:992px) {
