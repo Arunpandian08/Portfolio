@@ -1,0 +1,278 @@
+/* Project Container */
+.project-container {
+    height: calc(100% - 60px);
+    min-height: 100vh;
+    margin-top: 8rem !important;
+}
+
+@media screen and (max-width: 850px) {
+    .project-container {
+        margin-top: 18rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .project-container {
+        margin-top: 0rem !important;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .project-container {
+        margin-top: 2rem;
+    }
+}
+
+@media screen and (max-width: 325px) {
+    .project-container {
+        margin-top: 5rem !important;
+    }
+
+    .project-details p {
+        font-size: 13px;
+    }
+
+    .project-image img {
+        width: 100%;
+        height: 200px !important;
+        margin-bottom: 0.8rem;
+    }
+
+    .project-heading-section p {
+        margin-top: 1rem !important;
+        margin-bottom: 1rem !important;
+    }
+}
+
+@media screen and (min-width: 376px) and (max-width: 426px) {
+    .project-container {
+        margin-top: 4rem !important;
+    }
+}
+
+/* Project Heading Section */
+.project-heading-section {
+    position: relative;
+    text-align: center;
+}
+
+.project-heading-section .subheading {
+    font-size: 13px;
+    font-weight: 500;
+    display: block;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    color: black;
+    letter-spacing: 3px;
+}
+
+.project-heading-section h1.big {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 10vw;
+    color: rgba(70, 230, 150, 0.034);
+    z-index: -1;
+    font-weight: 900;
+}
+
+.project-heading-section h1.big.big-2 {
+    right: 0;
+}
+
+.project-heading-section h2 {
+    font-size: 5vw;
+    font-weight: 700;
+    color: #38eb5c;
+}
+
+@media (max-width: 767.98px) {
+    .project-heading-section h2 {
+        font-size: 40px !important;
+    }
+}
+
+.project-heading-section p {
+    color: #feffffe6;
+    font-weight: 600;
+    margin: 3rem auto;
+    padding: 0 10px;
+}
+
+@media screen and (min-width: 767.98px) {
+    .project-heading-section p {
+        margin-top: 3.5rem;
+    }
+}
+
+/* Project Content */
+.project-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* Project Row */
+.project-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin: 0 auto;
+    border-radius: 8px;
+    padding: 5px;
+    background-color: #030b2b;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.project-row:hover {
+    box-shadow: 0px 0px 20px 1px #ffbb763f, 0px 0px 40px 10px #ffbb763f;
+    border: 1px solid rgba(255, 255, 255, 0.454);
+}
+
+.project-row.left-image .project-image {
+    margin-left: 10px;
+    order: 1;
+}
+
+.project-row.left-image .project-details {
+    order: 2;
+}
+
+.project-row.right-image .project-image {
+    margin-right: 10px;
+    order: 2;
+}
+
+.project-row.right-image .project-details {
+    order: 1;
+}
+
+.project-image img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+}
+
+.project-details {
+    padding: 10px;
+    height: 400px;
+    max-width: 600px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-details h3 {
+    margin-bottom: 1rem;
+    color: #38eb5c;
+}
+
+.project-details p {
+    margin-bottom: 1rem;
+    color: #feffffe6;
+}
+
+/* Project Links */
+.project-links a {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #38eb5c;
+    text-decoration: none;
+    transition: all 0.5s ease;
+}
+
+.project-links .code-link {
+    display: flex;
+    justify-content: center;
+}
+
+.project-links .code-link a {
+    display: inline-flex;
+    margin: 0 10px;
+    position: relative;
+}
+
+.project-links .code-link a:hover {
+    color: #fbff00;
+}
+
+.project-links .code-link a:hover::after {
+    content: ' \f08e';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 600;
+    position: absolute;
+    right: -15px;
+    top: 2px;
+    color: #fbff00;
+}
+
+/* Demo Button */
+.demo-btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.rainbow-hover {
+    font-size: 16px;
+    font-weight: 700;
+    color: #ff7576;
+    background-color: #030b2b;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 12px 24px;
+    position: relative;
+    line-height: 24px;
+    border-radius: 9px;
+    box-shadow: 0px 1px 2px #2B3044,
+        0px 4px 16px #2B3044;
+    transform-style: preserve-3d;
+    transform: scale(var(--s, 1)) perspective(600px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg));
+    perspective: 600px;
+    transition: all 0.3s ease;
+}
+
+
+.sp {
+    background: linear-gradient(90deg,
+            #866ee7,
+            #ea60da,
+            #ed8f57,
+            #fbd41d,
+            #2cca91);
+    display: block;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.rainbow-hover:active {
+    transform: scale(0.96);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .project-row {
+        flex-direction: column;
+    }
+
+    .project-image {
+        margin-top: 1rem !important;
+        margin-bottom: 0 !important;
+    }
+
+    .project-details {
+        font-size: 13.5px;
+        margin-top: -3.5rem !important;
+    }
+
+    .project-image,
+    .project-details {
+        order: 0 !important;
+    }
+}

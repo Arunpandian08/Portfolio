@@ -1,0 +1,336 @@
+.navbar {
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 65px;
+    z-index: 998;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #030b2bf7;
+}
+
+/* Navigation bar styles */
+nav {
+    width: calc(min(992px, 100%));
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo styles */
+.nav-brand a img {
+    filter: brightness(100%);
+    margin-top: 5px;
+}
+
+/* Navigation links container */
+.nav-links {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Individual navigation items */
+.nav-links .nav-items a {
+    font-size: 1.2rem;
+    color: #fff;
+    padding: 10px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+/* Hover effect for navigation items */
+.nav-links .nav-items a:hover {
+    color: rgb(255, 0, 0) !important;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+/* Adding span elements for hover effects */
+.nav-links .nav-items span:nth-child(1)::before,
+.nav-links .nav-items span:nth-child(1)::after,
+.nav-links .nav-items span:nth-child(2)::before,
+.nav-links .nav-items span:nth-child(2)::after {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    transition: all 0.2s ease;
+    opacity: 0;
+}
+
+.nav-links .nav-items:hover  span:nth-child(1)::before {
+    top: 0;
+    left: 0;
+    border-top: 2px solid #d80707;
+    border-left: 2px solid #d80707;
+}
+
+.nav-links .nav-items:hover  span:nth-child(1)::after {
+    top: 0;
+    right: 0;
+    border-top: 2px solid #d80707;
+    border-right: 2px solid #d80707;
+}
+
+.nav-links .nav-items:hover  span:nth-child(2)::before {
+    bottom: 0;
+    left: 0;
+    border-bottom: 2px solid #d80707;
+    border-left: 2px solid #d80707;
+}
+
+.nav-links .nav-items:hover  span:nth-child(2)::after {
+    bottom: 0;
+    right: 0;
+    border-bottom: 2px solid #d80707;
+    border-right: 2px solid #d80707;
+}
+
+.nav-links .nav-items:hover span:nth-child(1)::before,
+.nav-links .nav-items:hover span:nth-child(1)::after,
+.nav-links .nav-items:hover span:nth-child(2)::before,
+.nav-links .nav-items:hover span:nth-child(2)::after {
+    opacity: 1;
+}
+
+.nav-links .nav-items:hover span:nth-child(1)::before {
+    top: -2px;
+    left: -2px;
+}
+
+.nav-links .nav-items:hover span:nth-child(1)::after {
+    top: -2px;
+    right: -2px;
+}
+
+.nav-links .nav-items:hover span:nth-child(2)::before {
+    bottom: -2px;
+    left: -2px;
+}
+
+.nav-links .nav-items:hover span:nth-child(2)::after {
+    bottom: -2px;
+    right: -2px;
+}
+
+/* Active effect for navigation items */
+.nav-links .nav-items.active a {
+    color: rgb(0, 255, 38);
+    font-weight: 500;
+}
+
+.nav-links .nav-items.active span:nth-child(1)::before,
+.nav-links .nav-items.active span:nth-child(1)::after,
+.nav-links .nav-items.active span:nth-child(2)::before,
+.nav-links .nav-items.active span:nth-child(2)::after {
+    opacity: 1;
+}
+
+.nav-links .nav-items.active span:nth-child(1)::before {
+    top: -2px;
+    left: -2px;
+}
+
+.nav-links .nav-items.active span:nth-child(1)::after {
+    top: -2px;
+    right: -2px;
+}
+
+.nav-links .nav-items.active span:nth-child(2)::before {
+    bottom: -2px;
+    left: -2px;
+}
+
+.nav-links .nav-items.active span:nth-child(2)::after {
+    bottom: -2px;
+    right: -2px;
+}
+
+/* Adding span elements for hover effects */
+.nav-links .nav-items span:nth-child(1)::before,
+.nav-links .nav-items span:nth-child(1)::after,
+.nav-links .nav-items span:nth-child(2)::before,
+.nav-links .nav-items span:nth-child(2)::after {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    transition: all 0.2s ease;
+    opacity: 0;
+}
+
+.nav-links .nav-items span:nth-child(1)::before {
+    top: 0;
+    left: 0;
+    border-top: 2px solid rgb(0, 255, 38);
+    border-left: 2px solid rgb(0, 255, 38);
+}
+
+.nav-links .nav-items span:nth-child(1)::after {
+    top: 0;
+    right: 0;
+    border-top: 2px solid rgb(0, 255, 38);
+    border-right: 2px solid rgb(0, 255, 38);
+}
+
+.nav-links .nav-items span:nth-child(2)::before {
+    bottom: 0;
+    left: 0;
+    border-bottom: 2px solid rgb(0, 255, 38);
+    border-left: 2px solid rgb(0, 255, 38);
+}
+
+.nav-links .nav-items span:nth-child(2)::after {
+    bottom: 0;
+    right: 0;
+    border-bottom: 2px solid rgb(0, 255, 38);
+    border-right: 2px solid rgb(0, 255, 38);
+}
+
+.nav-links .nav-items:hover span:nth-child(1)::before,
+.nav-links .nav-items:hover span:nth-child(1)::after,
+.nav-links .nav-items:hover span:nth-child(2)::before,
+.nav-links .nav-items:hover span:nth-child(2)::after {
+    opacity: 1;
+}
+
+.nav-links .nav-items:hover span:nth-child(1)::before {
+    top: -2px;
+    left: -2px;
+}
+
+.nav-links .nav-items:hover span:nth-child(1)::after {
+    top: -2px;
+    right: -2px;
+}
+
+.nav-links .nav-items:hover span:nth-child(2)::before {
+    bottom: -2px;
+    left: -2px;
+}
+
+.nav-links .nav-items:hover span:nth-child(2)::after {
+    bottom: -2px;
+    right: -2px;
+}
+
+/* Nav items with animation delays */
+.nav-items.animate__animated.animate__flipInX:nth-child(1) {
+    animation-duration: 0.5s;
+    animation-delay: 0.1s;
+}
+
+.nav-items.animate__animated.animate__flipInX:nth-child(2) {
+    animation-duration: 0.8s;
+    animation-delay: 0.2s;
+}
+
+.nav-items.animate__animated.animate__flipInX:nth-child(3) {
+    animation-duration: 1s;
+    animation-delay: 0.3s;
+}
+
+.nav-items.animate__animated.animate__flipInX:nth-child(4) {
+    animation-duration: 1.3s;
+    animation-delay: 0.4s;
+}
+
+.nav-items.animate__animated.animate__flipInX:nth-child(5) {
+    animation-duration: 1.6s;
+    animation-delay: 0.5s;
+}
+
+.nav-items.animate__animated.animate__flipInX:nth-child(6) {
+    animation-duration: 1.8s;
+    animation-delay: 0.6s;
+}
+
+/* Action button styles */
+.action-btn img {
+    cursor: pointer;
+    transition: all 0.5s ease;
+    filter: saturate(2);
+}
+
+.closeIcon {
+    filter: saturate(10);
+}
+
+/* Dropdown menu container */
+.dropdown_menu {
+    display: none;
+    position: absolute;
+    right: -110%;
+    top: 65px;
+    background-color: #030b2bf7;
+    width: 100%;
+    height: calc(100vh - 60px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: right 0.5s ease-in-out;
+}
+
+.dropdown_menu.open {
+    right: 0;
+}
+
+/* Dropdown menu items container */
+.dropdown_menu ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 1rem;
+    height: 100%;
+}
+
+/* Dropdown menu individual items */
+.dropdown_menu li {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Action button inside dropdown menu */
+.dropdown_menu .action-btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* Responsive design for larger screens */
+@media screen and (min-width: 992px) {
+    .action-btn {
+        display: none;
+    }
+}
+
+/* Responsive design for smaller screens */
+@media screen and (max-width: 992px) {
+    .nav-links {
+        display: none;
+    }
+
+    .dropdown_menu {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 767px) and (max-width: 992px) {
+    .dropdown_menu {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    nav {
+        margin: 0 auto;
+        width: calc(min(769px), 90%) !important;
+    }
+}
