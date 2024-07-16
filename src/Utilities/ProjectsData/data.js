@@ -6,6 +6,16 @@ import instagramIcon from "../../assets/ContactSectionImages/instagramIcon.png";
 const projectsData = [
   {
     id: 1,
+    image: "/Projects Images/E-commerce.png",
+    title: "E-Commerce web application - Redux-toolkit",
+    desc: "This e-commerce web application is built with React and Redux Toolkit for state management, featuring dynamic cart operations (add, remove, clear items) and secure user authentication with JWT. The backend, developed using Node.js, Express, and MongoDB, handles user data and cart products efficiently. It integrates Stripe for secure payment processing and supports CRUD operations for user profiles. The frontend is fully responsive with customized styling for an enhanced user experience.",
+    frontend:
+      "https://github.com/Arunpandian08/E-Commerce-Frontend.git",
+    backend: "https://github.com/Arunpandian08/E-Commerce-Backend.git",
+    demo: "https://shopping-zone-redux.netlify.app/",
+  },
+  {
+    id: 2,
     image: "/Projects Images/diet-suggestion-app.png",
     title: "Diet Suggestion App -CapStone Project",
     desc: "Healthy Diet is a comprehensive app designed to help users manage their health and fitness goals with personalized diet plans, user management, and a variety of diet recipes. It features BMI & BMR calculators, effective fat burner suggestions, and interactive diet charts powered by Chart.js for a complete health tracking experience",
@@ -15,7 +25,7 @@ const projectsData = [
     demo: "https://diet-suggestion-app-frontend.netlify.app/",
   },
   {
-    id: 2,
+    id: 3,
     image: "/Projects Images/youtube-clone.png",
     title: "Youtube-Clone with Youtube data API",
     desc: "YouTubeClone is a dynamic video platform fetching data from the YouTube Data API. It features a user-friendly homepage, detailed video pages, and recommended videos. Built with React Router DOM and enhanced with Moment.js for time formatting, it delivers an engaging and seamless video-watching experience.",
@@ -26,7 +36,7 @@ const projectsData = [
     demo: "https://youtube-clone-frontend-f50664.netlify.app/",
   },
   {
-    id: 3,
+    id: 4,
     image: "/Projects Images/todo_app.png",
     title: "Todo App",
     desc: "Todo List is an efficient task management app utilizing Context API for state management. It features a robust Todo Form, status filtering, and task cards with options to change status or delete todo`s, ensuring seamless and organized productivity",
