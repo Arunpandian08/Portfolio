@@ -37,7 +37,7 @@ const Project = () => {
           duration: 1,
           scrollTrigger: {
             trigger: row,
-            start: "top 80%",
+            start: "top 75%",
             toggleActions: "play none none none",
           },
           delay: index * 0.2,
