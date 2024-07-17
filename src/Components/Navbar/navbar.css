@@ -20,6 +20,12 @@ nav {
     align-items: center;
 }
 
+@media screen and (min-width:992px) and (max-width:1070px) {
+    nav{
+        width: 90%;
+    }
+}
+
 /* Logo styles */
 .nav-brand a img {
     filter: brightness(100%);
@@ -322,10 +328,12 @@ nav {
     }
 }
 
+
 @media screen and (min-width: 767px) and (max-width: 992px) {
     .dropdown_menu {
         width: 50%;
     }
+
 }
 
 @media screen and (max-width: 850px) {

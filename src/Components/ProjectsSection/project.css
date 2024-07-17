@@ -158,7 +158,7 @@
 
 .project-details {
     padding: 10px;
-    height: 400px;
+    min-height: 400px;
     max-width: 600px;
     display: flex;
     flex-flow: column wrap;
@@ -256,14 +256,14 @@
 }
 
 /* Responsive Design */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 992px) {
     .project-row {
         flex-direction: column;
     }
 
     .project-image {
         margin-top: 1rem !important;
-        margin-bottom: 0 !important;
+        margin-bottom: 1rem !important;
     }
 
     .project-details {
