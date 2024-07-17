@@ -41,7 +41,7 @@ const Project = () => {
             start: "top 75%",
             toggleActions: "play none none none",
           },
-          delay: index * 0.1,
+          // delay: index * 0.1,
         }
       );
     });
