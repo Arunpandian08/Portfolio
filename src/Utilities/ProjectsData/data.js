@@ -22,7 +22,7 @@ const projectsData = [
     frontend:
       "https://github.com/Arunpandian08/Diet-Suggestion-App-Frontend.git",
     backend: "https://github.com/Arunpandian08/Diet-suggestion-App-backend.git",
-    demo: "https://diet-suggestion-app-frontend.netlify.app/",
+    demo: "https://diet-suggesion-web-app.netlify.app/",
   },
   {
     id: 3,
