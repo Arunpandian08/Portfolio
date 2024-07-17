@@ -35,12 +35,13 @@ const Project = () => {
           opacity: 1,
           y: 0,
           duration: 1,
+          stagger: 0.2,
           scrollTrigger: {
             trigger: row,
             start: "top 75%",
             toggleActions: "play none none none",
           },
-          delay: index * 0.2,
+          delay: index * 0.1,
         }
       );
     });
