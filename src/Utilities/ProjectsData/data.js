@@ -16,6 +16,16 @@ const projectsData = [
   },
   {
     id: 2,
+    image: "/Projects Images/real-estate-management.png",
+    title: "Real Estate Management - CRUD Operation",
+    desc: "My real estate management app features comprehensive user management with authentication and authorization, enabling admins to efficiently add, edit, and delete property data. The frontend is developed with React, utilizing React Router DOM for seamless navigation and Axios for API interactions. The backend is built with Node.js and Express, employing JWT for secure authentication, bcrypt for password hashing, and middleware including cookie-parser, CORS, and nodemon to ensure robust security and streamlined development.",
+    frontend:
+    "https://github.com/Arunpandian08/Real-Estate-Management-Frontend.git",
+    backend: "https://github.com/Arunpandian08/Real-Estate-Management-Backend.git",
+    demo: "https://real-estate-management-crud.netlify.app/",
+  },
+  {
+    id: 3,
     image: "/Projects Images/diet-suggestion-app.png",
     title: "Diet Suggestion App -CapStone Project",
     desc: "Healthy Diet is a comprehensive app designed to help users manage their health and fitness goals with personalized diet plans, user management, and a variety of diet recipes. It features BMI & BMR calculators, effective fat burner suggestions, and interactive diet charts powered by Chart.js for a complete health tracking experience",
@@ -25,7 +35,7 @@ const projectsData = [
     demo: "https://diet-suggesion-web-app.netlify.app/",
   },
   {
-    id: 3,
+    id: 4,
     image: "/Projects Images/youtube-clone.png",
     title: "Youtube-Clone with Youtube data API",
     desc: "YouTubeClone is a dynamic video platform fetching data from the YouTube Data API. It features a user-friendly homepage, detailed video pages, and recommended videos. Built with React Router DOM and enhanced with Moment.js for time formatting, it delivers an engaging and seamless video-watching experience.",
@@ -34,18 +44,7 @@ const projectsData = [
     backend:
       "https://github.com/Arunpandian08/Backend-youtube-clone-with-youtube-API.git",
     demo: "https://youtube-clone-frontend-f50664.netlify.app/",
-  },
-  {
-    id: 4,
-    image: "/Projects Images/todo_app.png",
-    title: "Todo App",
-    desc: "Todo List is an efficient task management app utilizing Context API for state management. It features a robust Todo Form, status filtering, and task cards with options to change status or delete todo`s, ensuring seamless and organized productivity",
-    frontend:
-      "https://github.com/Arunpandian08/Frontend-Todo-App-Context-API.git",
-    backend:
-      "https://github.com/Arunpandian08/Backend-Todo-App-Context-API.git",
-    demo: "https://todo-app-with-context-api-08.netlify.app/",
-  },
+  }
 ];
 
 const eductionData = [
