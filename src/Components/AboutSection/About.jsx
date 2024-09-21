@@ -92,18 +92,17 @@ const About = () => {
       <div className="row">
         <article className="about">
           <div className="about-content">
-            <p className="para" style={{ opacity: "1" }}>
-              Passionate MERN Stack Developer (Fresher) | Skilled in{" "}
-              <span>Frontend technologies</span> like{" "}
-              <strong> HTML, CSS, JavaScript, ReactJS, Bootstrap,</strong> with
-              a touch of<strong> Tailwind CSS.</strong> <br /> Proficient in{" "}
-              <span>Backend development</span> using{" "}
-              <strong>
-                Node.js and Express.js, with experience in user management,
-                authentication, authorization, and MongoDB integration
-              </strong>
-              . Basic knowledge of MySQL.
-            </p>
+            <ul className="para" style={{ opacity: "1" }}>
+              <li className='point-2 animate__animated animate__flipInX'>
+                I'm skilled in developing <strong>Web Applications</strong>, utilizing technologies like <strong><abbr title="HyperText Markup Language">HTML5</abbr>, <abbr title="Cascading Style Sheets">CSS3</abbr>, JavaScript, React JS, Bootstrap, Tailwind CSS.</strong>
+              </li>
+              <li className='point-3 animate__animated animate__flipInX'>
+                Additionally, I have strong skills in <strong>Back-End development</strong> using <strong>NodeJS</strong> and <strong>ExpressJS.</strong> I follow the <strong><abbr title="Model-View-Controller">MVC</abbr> pattern</strong> and have experience integrating both <strong><abbr title="Non-Relational Database Management Systems">NoSQL</abbr></strong> and <strong><abbr title="Relational Database Management Systems">RDBMS</abbr></strong>.
+              </li>
+              <li className='point-4 animate__animated animate__flipInX'>
+                I ensure that my applications are built with efficient state management and secure <strong><abbr title="Representational State Transfer Application Programming Interface">RESTful API</abbr></strong> integration.
+              </li>
+            </ul>
           </div>
         </article>
         <Tilt
@@ -116,7 +115,7 @@ const About = () => {
         >
 
           <article className="image-container">
-            <img src="/about-section.png" width="450px" height="400px" alt="" />
+            <img src="/about-section.png" width="100" height="100" alt="" />
           </article>
         </Tilt>
       </div>
