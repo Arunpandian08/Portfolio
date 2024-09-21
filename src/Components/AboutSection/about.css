@@ -103,8 +103,8 @@
     text-align: center;
 
     & img {
-        width: 300px !important;
-        height: 100% !important;
+        width: 200px !important;
+        height: 300px !important;
         zoom: 110%;
     }
 }
