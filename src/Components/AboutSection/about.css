@@ -40,6 +40,9 @@
 .para strong {
     color: #38eb5c;
     letter-spacing: 1px;
+    abbr{
+        color:inherit;
+    }
 }
 
 .para li {
