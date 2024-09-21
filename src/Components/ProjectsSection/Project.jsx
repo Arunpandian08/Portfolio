@@ -34,8 +34,8 @@ const Project = () => {
         {
           opacity: 1,
           y: 0,
-          duration: 1,
-          stagger: 0.2,
+          duration: 0.5,
+          stagger: 0.1,
           scrollTrigger: {
             trigger: row,
             start: "top 75%",
