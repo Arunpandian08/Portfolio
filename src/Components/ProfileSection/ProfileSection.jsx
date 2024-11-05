@@ -42,7 +42,7 @@ const ProfileSection = () => {
                     <div>
                         <button className="css-buttons-io-button">
                             <img src={downloadIcon} width='20px' height='20px' alt="" />
-                            <span><a href="/Arunpandian-FullStackDeveloper.pdf" download="Arunpandian-FullStackDeveloper.pdf">Download CV</a></span>
+                            <span><a href='https://drive.google.com/file/d/1BBrR62lK5MV-BuJ54Ry71pRW6p9Wq5YE/view' target="_blank" rel="noopener noreferrer">Download CV</a></span>
                         </button>
                     </div>
                     <div>
