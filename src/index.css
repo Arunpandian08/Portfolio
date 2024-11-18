@@ -1,62 +1,66 @@
-/* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap"); */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&family=Concert+One&family=Milonga:ital,wght@0,400;0,700;1,400;1,700&family=Bungee+Spice&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic');
+@import url(https://fonts.googleapis.com/css?family=Rubik:300,regular,500,600,700,800,900,300italic,italic,500italic,600italic,700italic,800italic,900italic);
 
-/* Global styles */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-  color: white;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    color: white;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+html {
+    scroll-behavior: initial;
 }
 
 #root {
-  margin: 0;
-  padding: 0;
-  min-width: 100%;
-  min-height: 100vh;
-  max-height: 100%;
-  overflow-x: hidden !important;
-  scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    min-width: 100%;
+    min-height: 100vh;
+    max-height: 100%;
+    overflow-x: hidden !important;
+    scroll-behavior: smooth;
+    background-image: repeating-linear-gradient(to right, transparent 0 79px, #eee1 79px 80px), repeating-linear-gradient(to bottom, transparent 0 79px, #eee1 79px 80px);
+
+    &::before {
+        position: fixed;
+        width: 250px;
+        height: 400px;
+        content: '';
+        background-image: linear-gradient(to right, #d02e23, #7a43b6);
+        z-index: -1;
+        top: -200px;
+        left: calc(50% - 200px);
+        border-radius: 50% 50% 0 0;
+        pointer-events: none;
+        filter: blur(250px);
+    }
 }
 
+
 body {
-  overflow-x: hidden;
-  width: 100%;
-  min-height: 100vh;
-  height: 100%;
-  user-select: none; /* Standard syntax */
-  -webkit-user-select: none; /* Chrome, Safari, Opera */
-  -moz-user-select: none; /* Firefox */
-  -ms-user-select: none; /* Internet Explorer/Edge */
+    margin: 0 auto;
+    padding: 0;
+    width: 100dvw;
+    min-height: 100vh;
+    overflow-x: hidden;
+    background-color: #010824;
 }
 
 a {
-  text-decoration: none;
+    text-decoration: none;
+    color: inherit;
 }
 
 ul li {
-  list-style: none;
-  text-decoration: none;
+    list-style-type: none;
 }
 
 ::-webkit-scrollbar {
-  width: 10px;
-  border-radius: 25px;
+    display: none;
 }
-
-::-webkit-scrollbar-track {
-  background: #ffffff;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #21005e;
-  border-radius: 30px;
-  transition: all 0.2s ease;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #ff4000;
-  cursor: grab;
-}
-

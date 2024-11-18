@@ -10,7 +10,7 @@
     border-radius: 50%;
     cursor: pointer;
     border: none;
-    background: linear-gradient(#44ea76, #39fad7);
+    background: linear-gradient(#ff7700, #eac16e);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     z-index: 1000;
     transition: opacity 0.3s ease, background 0.3s ease;
@@ -24,7 +24,7 @@
 
     .scroll-to-top:hover {
         opacity: 1;
-        background: linear-gradient(#44ea76, #39fad7);
+        background: linear-gradient(#ff7700, #eac16e);
     }
     .scroll-to-top .arrow path {
         fill: #ffffff !important;
@@ -39,7 +39,7 @@
     font-size: 0.7em;
     width: 100px;
     position: absolute;
-    color: #38eb5c;
+    color: #ff7700;
     font-weight: 600;
     display: flex;
     align-items: center;

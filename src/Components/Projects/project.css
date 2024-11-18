@@ -1,0 +1,18 @@
+.project-layout {
+    width: inherit;
+    height: 100%;
+}
+
+/* Responsive design for larger screens */
+@media (min-width: 768px) {
+    .project-layout {
+        margin: 0 auto;
+        width: min(1300px, 100%);
+        min-height: 100dvh;
+
+    }
+
+    .project-layout .heading {
+        margin: 2rem auto;
+    }
+}

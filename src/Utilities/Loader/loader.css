@@ -27,7 +27,7 @@
     top: 0;
     bottom: 0;
     margin: auto;
-    border: 4px dotted #F00;
+    border: 4px dotted #ff7700;
     border-style: solid solid dotted;
     width: 30px;
     height: 30px;
@@ -55,3 +55,4 @@
         transform: rotate(-360deg);
     }
 }
+

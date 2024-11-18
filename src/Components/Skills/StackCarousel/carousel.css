@@ -1,0 +1,26 @@
+.carousel-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+    background-color: #fff;
+}
+
+.stack-carousel {
+    display: flex;
+    height: 10vw;
+    white-space: nowrap;
+    align-items: center;
+    position: relative;
+}
+.carousel-container hr{
+    background-color: #031045;
+    height: 2px; 
+    border: none;
+}
+.stack-carousel img {
+    height: 6vw;
+    margin-right: 1vw;
+    flex-shrink: 0;
+    user-select: none;
+    pointer-events: none;
+}

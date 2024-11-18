@@ -1,0 +1,128 @@
+/* ========== About section css =============== */
+.about-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 20px;
+    color: #fff;
+}
+
+.heading {
+    position: relative;
+    text-align: center;
+}
+
+.heading h1 {
+    position: absolute;
+    top: -40%;
+    left: 0;
+    right: 0;
+    font-size: 3.5rem;
+    color: rgba(70, 230, 150, 0.034);
+    z-index: -1;
+    font-weight: 900;
+}
+
+.heading h2 {
+    font-family: Rubik, sans-serif !important;
+    color: #ffffff;
+    z-index: 1;
+}
+
+.heading h2 {
+    font-family: Rubik, sans-serif !important;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+@media (min-width:992px) {
+    .heading h1 {
+        font-size: 8vw;
+    }
+
+    .heading h2 {
+        font-size: 5vw;
+    }
+}
+
+@media (min-width:992px) {
+    .about-details li {
+        font-size: clamp(1em, 10%, 2.5em) !important;
+    }
+}
+
+.about-details {
+    background-color: rgba(0, 0, 0, 0.003);
+    backdrop-filter: blur(20px);
+    border-radius: 10px;
+    padding: 5px;
+    width: 100%;
+    background-size: 100%;
+    background-attachment: fixed;
+}
+
+.about-details li strong {
+    color: #ff7700;
+    letter-spacing: 1px;
+
+    abbr {
+        color: inherit;
+    }
+}
+
+.about-details li {
+    position: relative;
+    font-size: clamp(0.8em, 10%, 2em);
+    padding: 10px 0;
+    text-indent: 35px;
+    list-style-type: none;
+}
+
+.about-details li::before,
+.about-details li::after {
+    position: absolute;
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ff7700;
+    left: 12px;
+    top: 16.5px;
+}
+
+.about-details li::before {
+    z-index: 1;
+}
+
+.about-details li::after {
+    top: 16.5px;
+    z-index: 0;
+    animation: pulse 1.5s linear infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: translateY(-50%) scale(2);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translateY(-50%) scale(2.5);
+        opacity: 0.7;
+    }
+
+    100% {
+        transform: translateY(-50%) scale(3);
+        opacity: 0;
+    }
+}
+
+/* Responsive design for larger screens */
+@media (min-width: 768px) {
+    .about-content {
+        width: calc(100% - 320px);
+        height: 90dvh;
+    }
+}

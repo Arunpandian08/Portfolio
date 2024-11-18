@@ -1,0 +1,178 @@
+@import url(https://fonts.googleapis.com/css?family=Bungee+Spice:regular);
+
+/* ============ Profile section css ============= */
+.content-layout {
+    max-width: min(1200px, 100%) !important;
+    height: 100dvh;
+    padding-top: 55px !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin: 0 auto;
+    z-index: 1;
+}
+
+.card {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-image: repeating-linear-gradient(to right, #0a133883 0 79px, #eeeeee17 79px 80px), repeating-linear-gradient(to bottom, #0a133883 0 79px, #eeeeee17 79px 80px);
+    backdrop-filter: blur(5px);
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../../assets/section.svg');
+    background-size: cover;
+    background-position: center;
+    backdrop-filter: blur(5px);
+    border-radius: inherit;
+    opacity: 1;
+    z-index: -1;
+}
+
+
+.profile-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 0 auto !important;
+    color: #fff;
+    box-shadow: 0 0 5px #5870d1 !important;
+    border-radius: 2.5px;
+}
+
+.image-container {
+    position: relative;
+}
+
+.image-container img {
+    background-color: #00000055;
+    object-fit: cover;
+    text-align: center;
+    border: 2px solid #5870d1;
+    box-shadow: 0 0 2px #5870d1;
+}
+
+.profile-details {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.profile-details .name {
+    font-family: Bungee Spice, sans-serif !important;
+    color: #ffffff;
+    margin: 0;
+}
+
+.profile-content,
+.about-content {
+    /* opacity: 0; */
+    transform: translateX(0);
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+/*=========== Responsive design for smaller screens ============*/
+@media (max-width: 375px) {
+    .content-layout {
+        height: auto;
+        width: 100% !important;
+        padding-top: 75px;
+    }
+}
+
+@media screen and (min-width:376px) and(max-width:500) {
+    .content-layout {
+        height: auto;
+        width: 100% !important;
+        padding-top: 75px;
+    }
+    .profile-content {
+        height:100svh;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .content-layout {
+        height: auto;
+        width: 100%;
+        padding-top: 75px;
+    }
+
+    .card {
+        margin: 0 auto;
+        width: 100%;
+        height: auto;
+    }
+
+    .profile-content {
+        padding: 2rem !important;
+    }
+
+    .card::before,
+    .profile-details,
+    .image-container img {
+        transform: none !important;
+    }
+
+    .image-container {
+        left: 0 !important;
+    }
+}
+
+/* Responsive design for larger screens */
+@media (min-width: 769px) {
+    .content-layout {
+        width: min(780px, 100%);
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0 auto;
+        padding-top: 75px;
+        z-index: 1;
+    }
+
+    .card {
+        width: 500px !important;
+        height: 90dvh;
+    }
+
+    .about-content {
+        width: calc(100% - 320px);
+        height: 90dvh;
+    }
+}
+
+@media (min-width:992px) {
+    .card {
+        width: 500px !important;
+    }
+}
+
+@media screen and (min-width:1024px) {
+    .content-layout {
+        width: min(1000px, 100%);
+    }
+}
+
+@media (min-width:1300px) {
+    .content-layout {
+        width: min(1200px, 100%);
+    }
+}

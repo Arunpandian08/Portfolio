@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-scroll'
 import './footer.css'
-import colorPenIcon from '../../assets/FooterSection/footer-icon.png'
+import colorPenIcon from '../../assets/Images/FooterSectionIcon/footer-icon.png'
 
 const Footer = () => {
     const currentYear = new Date().getFullYear();

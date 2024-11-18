@@ -1,100 +1,111 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-scroll';
+import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import './navbar.css';
-import logo from '../../assets/NavbarIcons/logo.png';
-import menuIcon from '../../assets/NavbarIcons/menuIcon.png';
-import menuCloseIcon from '../../assets/NavbarIcons/close.png';
+import logo from '../../assets/Images/NavbarIcons/logo.png';
+import menuIcon from '../../assets/Images/NavbarIcons/menuIcon.png';
+import menuCloseIcon from '../../assets/Images/NavbarIcons/close.png';
 
-const Navbar = ({ isOpen, setIsOpen }) => {
-    const [activeLink, setActiveLink] = useState('hero-section');
+const Navbar = ({ isOpen, setIsOpen, lenis }) => {
+    const [activeLink, setActiveLink] = useState('profile-section');
+    const [isScrolled, setIsScrolled] = useState(false);
 
-    const navItems = [
-        { id: 'hero-section', name: 'Home', offset: -80 },
-        { id: 'about-section', name: 'About', offset: -60 },
-        { id: 'skills-section', name: 'Skills', offset: -60 },
+    const navItems = useMemo(() => [
+        { id: 'profile-section', name: 'Profile', offset: 0 },
+        { id: 'skills-section', name: 'Skills', offset: 0 },
         { id: 'project-section', name: 'Projects', offset: -60 },
-        { id: 'resume-section', name: 'Resume', offset: -60 },
+        { id: 'education-section', name: 'Education', offset: -60 },
         { id: 'contact-section', name: 'Contact', offset: -60 },
-    ];
+    ], []);
+
+    const handleScroll = useCallback(() => {
+        const scrollPosition = window.scrollY + 80;
+        const profileSection = document.getElementById('profile-section');
+
+        navItems.forEach((item) => {
+            const section = document.getElementById(item.id);
+            if (section) {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+
+                if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                    setActiveLink(item.id);
+                }
+            }
+        });
+
+        if (profileSection) {
+            const profileSectionHeight = profileSection.clientHeight;
+            const scrollThreshold = profileSectionHeight * 0.1;
+            
+            setIsScrolled(window.scrollY >= scrollThreshold);
+        }
+    }, [navItems]);
 
     useEffect(() => {
-        const handleScroll = () => {
-            const scrollPosition = window.scrollY + 80; // Adjusted for navbar height
-
-            navItems.forEach((item) => {
-                const section = document.getElementById(item.id);
-                if (section) {
-                    const sectionTop = section.offsetTop;
-                    const sectionHeight = section.clientHeight;
-
-                    if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-                        setActiveLink(item.id);
-                    }
-                }
-            });
-        };
-
         handleScroll();
-
         window.addEventListener('scroll', handleScroll);
         return () => {
             window.removeEventListener('scroll', handleScroll);
         };
-    }, []);
+    }, [handleScroll]);
 
-    const handleToggleMenu = () => {
-        setIsOpen(!isOpen);
-    };
+    const handleToggleMenu = useCallback(() => {
+        setIsOpen(prev => !prev);
+    }, [setIsOpen]);
+
+    const handleLinkClick = useCallback((id, offset) => {
+        setIsOpen(false);
+        if (lenis) {
+            lenis.scrollTo(`#${id}`, {
+                offset: offset,
+                duration: 2,
+                easing: (t) => Math.sin((t * Math.PI) / 2),
+                direction: 'vertical',
+                gestureDirection: 'vertical',
+                smooth: true,
+                smoothTouch: false,
+                touchMultiplier: 2,
+                infinite: false,
+            });
+        }
+    }, [lenis, setIsOpen]);
+
+    const renderNavItems = useCallback((isMobile = false) => (
+        <ul className="nav-links">
+            {navItems.map((item) => (
+                <li key={item.id} className={`nav-items ${activeLink === item.id ? 'active' : ''}`}>
+                    <a
+                        href={`#${item.id}`}
+                        onClick={(e) => {
+                            e.preventDefault();
+                            handleLinkClick(item.id, item.offset);
+                        }}
+                    >
+                        {item.name}
+                    </a>
+                </li>
+            ))}
+        </ul>
+    ), [navItems, activeLink, handleLinkClick]);
 
     return (
-        <header className="navbar">
+        <header className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
             <nav>
                 <div className="nav-brand">
                     <a href="/">
                         <img src={logo} width='120px' height='60px' alt="logo" />
                     </a>
                 </div>
-                <ul className="nav-links">
-                    {navItems.map((item) => (
-                        <li key={item.id} className={`nav-items animate__animated animate__flipInX ${activeLink === item.id ? 'active' : ''}`}>
-                            <Link
-                                to={item.id}
-                                spy={true}
-                                smooth={true}
-                                offset={item.offset}
-                                duration={500}
-                                onClick={() => setIsOpen(false)}
-                            >
-                                {item.name}<span></span><span></span>
-                            </Link>
-                        </li>
-                    ))}
-                </ul>
+                {renderNavItems()}
                 <div className="action-btn" onClick={handleToggleMenu} aria-expanded={isOpen} aria-controls="dropdown_menu">
                     {isOpen ? <img className='closeIcon' src={menuCloseIcon} width='50px' height='50px' alt="close-menu-icon" />
                         : <img src={menuIcon} width='50px' height='45px' alt="open-menu-icon" />}
                 </div>
             </nav>
             <div className={`dropdown_menu ${isOpen ? 'open' : ''}`} id="dropdown_menu">
-                <ul className="nav-links">
-                    {navItems.map((item) => (
-                        <li key={item.id} className={`nav-items animate__animated ${isOpen ? 'animate__flipInX' : ''} ${activeLink === item.id ? 'active' : ''}`}>
-                            <Link
-                                to={item.id}
-                                spy={true}
-                                smooth={true}
-                                offset={item.offset}
-                                duration={500}
-                                onClick={() => setIsOpen(false)}
-                            >
-                                {item.name}
-                            </Link>
-                        </li>
-                    ))}
-                </ul>
+                {renderNavItems(true)}
             </div>
         </header>
     );
 };
 
-export default Navbar;
+export default React.memo(Navbar);
