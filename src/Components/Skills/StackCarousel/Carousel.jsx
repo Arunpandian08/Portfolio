@@ -8,7 +8,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Carousel = () => {
     const { frontendCarousel, backendCarousel } = objData;
-    console.log(frontendCarousel);
+    
     const frontendRef = useRef(null);
     const backendRef = useRef(null);
 
