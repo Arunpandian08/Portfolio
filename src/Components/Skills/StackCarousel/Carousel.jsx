@@ -23,8 +23,8 @@ const Carousel = () => {
                     x: direction === 'left' ? -distance : 0,
                     scrollTrigger: {
                         trigger: ref.current,
-                        start: 'top 80%',
-                        end: 'bottom 20%',
+                        start: 'top 90%',
+                        end: 'bottom 10%',
                         scrub: 1,
                         pin: false,
                         invalidateOnRefresh: true,
